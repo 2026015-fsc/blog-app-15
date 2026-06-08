@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head th:replace="~{fragments/layout :: head('BLOG DETAIL')}">
+</head>
+
+<body>
+    <h1><a href="/home">Blog Detail</a></h1>
+    <hr>
+    <div class="tab-all">
+        <ul class="tab">
+            <li><a href="/home">Home</a></li>
+            <li><a href="/blog">Blog Table</a></li>
+            <li><a href="/myblog">My Blog</a></li>
+            <li><a href="/write">Write</a></li>
+            <li><a href="/save">Save FavBlog</a></li>
+            <li><a href="/retire">Retire</a></li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <!-- <div>
+        <h1>Blog Serch</h1>
+    </div>
+    <div>
+        <form action="/blogSerch" method="get">
+            <input type="text" id="serchTitle" name="serchTitle" placeholder="Keyword">
+            <button type="submit">Serch</button>
+        </form>
+    </div> -->
+
+    <hr>
+
+    <h1>Blog Lists</h1>
+
+    <table>
+        <!-- <p class="none" th:if="${#lists.isEmpty(blog)}"> Blog have ever registered</p> -->
+        <tr>
+            <th>Title</th>
+            <th>Contents</th>
+        </tr>
+        <tr th:each="blog : ${blog}">
+            <td><span th:text="${blog.title}">Aaaaaa</span></td>
+            <td><span th:text="${blog.notes}">aaa</span></td>
+            <a th:href="@{/blog/{id}/edit(id=${blog.id})}">編集</a>
+        </tr>
+    </table>
+
+    <a href="/home"> Back</a>
+
+</body>
+
+</html>

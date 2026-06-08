@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head th:replace="~{fragments/layout :: head('BLOG DETAIL')}">
+</head>
+
+<body>
+    <h1><a href="/home">Blog Detail</a></h1>
+    <hr>
+    <div class="tab-all">
+        <ul class="tab">
+            <li><a href="/home">Home</a></li>
+            <li><a href="/blog">Blog Table</a></li>
+            <li><a href="/myblog">My Blog</a></li>
+            <li><a href="/write">Write</a></li>
+            <li><a href="/save">Save FavBlog</a></li>
+            <li><a href="/retire">Retire</a></li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h1>Blog Editing</h1>
+    <form th:action="@{/blog/{id}(id=${blogId})}" method="post" th:object="${blogForm}">
+        <label for="title">Title：</label>
+        <input type="text" th:field="*{title}">
+        <label for="notes">Contents：</label>
+        <input type="text" th:field="*{notes}">
+        <button type="submit">Edit Update</button>
+    </form>
+
+
+</body>
+
+</html>

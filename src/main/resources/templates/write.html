@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head th:replace="~{fragments/layout :: head('Write Blog')}">
+</head>
+
+<body>
+    <h1><a href="/home">Write</a></h1>
+    <hr>
+    <div class="tab-all">
+        <ul class="tab">
+            <li><a href="/home">Home</a></li>
+            <li><a href="/blog">Blog Table</a></li>
+            <li><a href="/myblog">My Blog</a></li>
+            <li><a href="/write">Write</a></li>
+            <li><a href="/save">Save FavBlog</a></li>
+            <li><a href="/retire">Retire</a></li>
+        </ul>
+    </div>
+
+    <h1><a href="/write">New Blog</a></h1>
+    <form action="/write" method="post">
+        <input type="text" id="Title" name="title" placeholder="Title" required><br>
+        <input type="text" id="Notes" name="notes" placeholder="Contents"><br>
+        <button type="submit">Post</button>
+        <button type="reset" class="cancel" style="margin-left: 10px;">Cancel</button>
+    </form>
+    
+</body>
+
+</html>
