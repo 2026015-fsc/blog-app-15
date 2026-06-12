@@ -7,37 +7,35 @@ hr {
 .tab {
     display: flex;
     gap: 50px;
-    /* list-style: circle; */
-    /* background-color: linen; */
-    /* width: 200px; */
-    /* min-height: 100vh; */
-    /* background-size: cover; */
-    /* background-color: fixed; */
-    /* position: right; */
-    /* margin: 1000; */
     font-family: 'Times New Roman', Times, serif;
-    /* font-optical-sizing: auto; */
-    /* font-weight: bold; */
     font-size: 20px;
     text-align: center;
-    /* border-bottom: 1px solid transparent; */
-    /* transition: border-color 0.3s; */
+    justify-content: center;
+    padding: 20px 40px;
 }
 
 a:hover {
     border-bottom-color: darkred;
 }
 
+.SerchBox {
+    /* justify-content: center; */
+    align-items: center;
+}
+
 h1 {
     color: chocolate;
     font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
 
-/* body {
+body {
     color: brown;
     font-family: 'Times New Roman', Times, serif;
     background-color: antiquewhite;
-} */
+}
 
 a:link {
     color: chocolate;
@@ -53,4 +51,3 @@ a:active {
     color: chocolate;
     text-decoration: none;
 }
-
